@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build C file",
+      "type": "shell",
+      "command": "clang",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "detail": "\ucef4\ud30c\uc77c\ub7ec: clang (C)"
+    },
+    {
+      "label": "build C++ file",
+      "type": "shell",
+      "command": "clang++",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "detail": "\ucef4\ud30c\uc77c\ub7ec: clang++ (C++)"
+    }
+  ]
+}

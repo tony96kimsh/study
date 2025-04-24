@@ -1,0 +1,11 @@
+0000000000000000000000000000000000000000 da245e2f11ac07e3060c5fdb1035605c33e259c2 Tony <tony96kimsh@gmail.com> 1743591733 +0900	commit (initial): Add CPP, PY, JS
+da245e2f11ac07e3060c5fdb1035605c33e259c2 0000000000000000000000000000000000000000 Tony <tony96kimsh@gmail.com> 1743591796 +0900	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 da245e2f11ac07e3060c5fdb1035605c33e259c2 Tony <tony96kimsh@gmail.com> 1743591796 +0900	Branch: renamed refs/heads/master to refs/heads/main
+da245e2f11ac07e3060c5fdb1035605c33e259c2 c6cbe596ada540adbd6bdc417b8dc6800e052c05 Tony <tony96kimsh@gmail.com> 1743611239 +0900	commit: add Fabonacci
+c6cbe596ada540adbd6bdc417b8dc6800e052c05 87f92b09514e146b153c8b695a7f53a5b90a7bb2 Tony <tony96kimsh@gmail.com> 1743611288 +0900	commit: readme
+87f92b09514e146b153c8b695a7f53a5b90a7bb2 20c4fee3377ee9e4a17f5f9fc4f9fef606f0d4b7 Tony <tony96kimsh@gmail.com> 1743648427 +0900	commit: edit FBC function
+20c4fee3377ee9e4a17f5f9fc4f9fef606f0d4b7 f14e33e19f058c73ac4d6fda43f0564f2f7d4cf7 Tony <tony96kimsh@gmail.com> 1744272224 +0900	commit: learn until Quick sort
+f14e33e19f058c73ac4d6fda43f0564f2f7d4cf7 84c3a0e79ca24cae8a3ac6bb99ce6e9589b29493 Tony <tony96kimsh@gmail.com> 1744272324 +0900	commit: until Quick Sort
+84c3a0e79ca24cae8a3ac6bb99ce6e9589b29493 268c789302143ff7a814ab6d10de015502ec1546 Tony <tony96kimsh@gmail.com> 1744272367 +0900	commit: edit MD
+268c789302143ff7a814ab6d10de015502ec1546 13c2994330543ebe98eb301c3c46cf270fdd3e21 Tony <tony96kimsh@gmail.com> 1744619167 +0900	commit: add QuickSort
+13c2994330543ebe98eb301c3c46cf270fdd3e21 6a3ad849132f67f47e7d2a40f6415533b660beb5 Tony <tony96kimsh@gmail.com> 1745118135 +0900	commit: sieve of eratosthenes
