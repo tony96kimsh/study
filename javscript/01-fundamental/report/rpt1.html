@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!--         사용자가 입력한 내용을 수집하여 콘솔에 출력하는
+        JavaScript 함수를 작성하세요. 또한, 사용자가 
+        "Submit" 버튼을 클릭했을 때 해당 함수가 실행되도록 이벤트를 처리하세요.
+        대략, 이름, 전화번호, 이메일정도의 입력창만 배치합니다. 
+        힌트 : form 태그의 action 이용하면 될것 같습니다. -->
+    <form action="/submit" method="post" id="getValue">
+        <p>
+            <input id="name" type="text" placeholder="이름" name="name">
+        </p>
+        <p>
+            <input id="tel" type="text" placeholder="전화번호" name="tel">
+        </p>
+        <p>
+            <input id="email" type="text" placeholder="이메일" name="email">
+        </p>
+        <p>
+            <input type="submit" value="submit">
+        </p>
+
+    </form>
+
+    <script>
+        const getValue = document.getElementById("getValue");
+        getValue.addEventListener('submit', function(e){
+            e.preventDefault();
+            
+            //개별 값 가져오기
+            const name = document.getElementById("name").value;
+            const tel = document.getElementById("tel").value;
+            const email = document.getElementById("email").value;            
+            console.log("name: " + name, "tel :" + tel, "email: " + email);
+
+            //FormData()
+            const formData = new FormData(getValue);
+            const data = Object.fromEntries(formData.entries());
+            console.log("formData : ", data);           
+
+        })
+    </script>
+</body>
+</html>

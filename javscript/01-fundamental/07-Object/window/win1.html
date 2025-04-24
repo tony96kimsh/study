@@ -1,0 +1,14 @@
+<button onclick="newOpen()">새 윈도우 열기</button>
+<button onclick="winClose()">윈도우 닫기</button>
+
+<script>
+    var newWin;
+    function newOpen(){
+        newWin = window.open('win2.html', '새창열기', style = 'width = 600, height = 300')
+    }
+    function winClose(){
+        newWin.close();
+        // window.close();
+        // close(); 
+    }
+</script>

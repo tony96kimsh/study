@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로컬 스토리지</title>
+</head>
+<body>
+    키 : <input type="text" id="key">
+    값 : <input type="text" id="data"> <br><br>
+    <input type="button" onclick="saveData()" value="데이터 저장"> <br><br>
+    <div id="result"></div>
+
+    <script>
+        const keyInput = document.getElementById('key');
+        const dataInput = document.getElementById('data');
+
+        function saveData() {                        
+            const key = keyInput.value;
+            const value = dataInput.value;
+
+            if (key && value) {
+                localStorage.setItem(key, value);
+                document.getElementById('result').innerHTML = "데이터 저장 완료";
+            } else {
+                document.getElementById('result').innerHTML = "키와 값을 모두 입력하세요.";
+            }
+        }
+    </script>
+</body>
+</html>

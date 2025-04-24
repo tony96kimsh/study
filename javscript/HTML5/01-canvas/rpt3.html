@@ -1,0 +1,51 @@
+<!-- 
+마우스 이벤트를 사용하여 사용자가 클릭한 위치에 선을 그려보세요.
+ 전에 학습했던 이벤트를 참고하세요. 
+마우스를 눌렀을 때 시작점을 잡고(moveTo), 그리는 중에 lineTo를 사용하고,
+ 마우스를 뗐을 때 closePath를 하면 되지 않을까요?  
+-->
+
+
+<canvas width="500" height="500" style="border:5px solid;">  
+</canvas>
+
+<!-- 
+1. mousedown
+마우스 버튼을 눌렀을 때 발생
+2. mouseup
+눌렀던 마우스 버튼을 뗐을 때 발생
+-->
+<script>
+    const canvas = document.querySelector("canvas")
+    const ctx = canvas.getContext('2d')
+    let isdrawing = false;
+        
+    canvas.addEventListener('mousedown', (e) => {       
+        const x = e.offsetX;
+        const y = e.offsetY;
+
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = '5';
+        isDrawing = true;
+
+        ctx.moveTo(x, y)
+    })
+
+    canvas.addEventListener('mousemove', (e) => {
+        if (!isDrawing) return;
+
+        const x = e.offsetX;
+        const y = e.offsetY;
+
+        ctx.lineTo(x, y)
+        ctx.stroke();
+    })
+
+    canvas.addEventListener('mouseup', (e) => {
+        ctx.closePath()
+        isDrawing = false;
+    })
+
+</script>

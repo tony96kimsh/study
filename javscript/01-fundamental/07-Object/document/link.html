@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link object</title>
+</head>
+<body>
+    <a href="http://www.gilbut.co.kr" target="_blank">MetaTony</a><br><br>
+    <a href="https://www.yes24.com" target="_blank">YES24</a>
+
+    <script>
+        for(let i = 0; i < document.links.length; i++)
+    {
+        document.write("document.link[i].href: " + document.links[i].href +  "<br>");
+        document.write("document.link[i].pathname: " + document.links[i].pathname +  "<br>");
+        document.write("document.link[i].target: " + document.links[i].target +  "<br>");
+    }
+    </script>
+</body>
+</html>

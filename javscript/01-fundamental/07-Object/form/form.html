@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="test">
+        <input type="text" name = "text1" size = 20 valeu = "첫번쨰입력"><p></p>
+        <input type="text" name = "text2" size = 10 valeu = "두번쨰입력"><p></p>
+        <button name="btn1">1st button</button>        
+        <button name="btn2">2st button</button>        
+    </form>
+
+    <script>
+        document.write("document.test.name: "+ document.test.name + "<br>");
+        document.write("document.test.method: "+ document.test.method + "<br>");
+        document.write("document.test.length: "+ document.test.length + "<br>");
+
+        for(var i = 0; i < document.test.length; i++) {
+            document.write("document.test.elements["+ i +"].name: "+ document.test.elements[i].name + "<br>");
+            document.write("document.test.elements["+ i +"].value: "+ document.test.elements[i].value + "<br>");
+        }
+
+    </script>
+</body>
+</html>

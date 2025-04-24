@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery kakao2</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <h1>API 연습</h1>
+    <input type="text" id="search">
+    <button id="submit">검색</button>
+
+    <script>
+        $('#submit').click(function(){
+            $.ajax({
+                    method: "GET",
+                    url: "https://dapi.kakao.com/v2/search/image?&query=" + $('#search').val(),
+                    headers: {Authorization: "KakaoAK 5da45d4f51738bbe234774a9193eb392"},
+                })
+            .done(function(data){
+                console.log(data)
+                $('body').append("<img src = " + data.documents[0].image_url + ">")
+            })
+        })
+    </script>
+</body>
+</html>

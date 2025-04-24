@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>    
+    <h1>배경색과 글자색을 변경합니다.</h1>
+     색상입력 : <input type = "text" id = "colorVal" value = ""> <p></p>
+     <button onclick = "backColor()">배경색 변경</button>
+     <button onclick = "textColor()">글자색 변경</button>
+
+     <script>
+        var colorValue;
+        function backColor() {
+            colorValue = document.getElementById("colorVal");
+            document.bgColor = colorValue.value;
+        }
+
+        function textColor(){
+            colorValue = document.getElementById("colorVal");
+            document.fgColor = colorValue.value;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <form name="test">
+        <select name="page" onchange="loadPage()" id="loadPage()">
+            <option value="#">사이트 선택</option>
+            <option value="http://google.com">GOOGLE</option>
+            <option value="https://grok.com">GROK</option>
+            <option value="https://www.knou.ac.kr/">KNOU</option>
+        </select>
+     </form>
+     <script>
+        function loadPage() {
+            var obj = document.test.page;
+            location.href = obj.options[obj.selectedIndex].value;
+        }
+     </script>
+</body>
+</html>

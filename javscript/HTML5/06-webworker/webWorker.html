@@ -1,0 +1,31 @@
+<button onclick="stopOperation()">워커 미적용 수행</button>
+<button onclick="applyWorker()">워커 적용 수행</button>
+<button onclick="awake()">깨어날 시간</button>
+<div id="result"></div>
+<script>
+		function applyWorker() {
+			if(window.Worker) {
+				var worker = new Worker('worker.js');
+				worker.postMessage("워커가 동작합니다.")
+				worker.onmessage = function(event) {
+					document.getElementById('result').innerHTML = event.data;
+				}
+				worker.onerror = function(error) {
+					document.getElementById('result').innerHTML += error.message + "<br>";
+					document.getElementById('result').innerHTML += error.filename + "<br>";
+					document.getElementById('result').innerHTML += error.lineno + "<br>";
+				}
+			} else {
+				document.getElementByid('result').innerHTML = "현재 브라우저는 지원하지 않습니다."
+			}
+		}
+		function stopOperation () {
+				var endTime = new Date().getTime() + 5000;
+				// 동기적 5초 대기 반복문
+				while(new Date().getTime() < endTime);
+				document.getElementById('result').innerHTML = "일어날 시간입니다.";
+		}
+		function awake () {
+				alert("애기야 일어나자")
+		}
+</script>

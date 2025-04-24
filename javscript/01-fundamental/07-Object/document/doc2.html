@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>    
+     <h1>문서 타이틀 변경</h1>
+     타이틀 입력: <input type="text" id="titleValue" value = "새문서"><p></p>
+     <button onclick="changeTitle()">타이틀변경하기</button>
+
+     <script>
+        var colorValue;
+        function changeTitle() {
+            docValue = document.getElementById("titleValue");
+            document.title = docValue.value;
+        }
+    </script>
+</body>
+</html>

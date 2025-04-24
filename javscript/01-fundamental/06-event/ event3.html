@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>event</title>
+</head>
+<body>
+    <input id="btnclk" type="button" value="btn" onclick="first()">
+    <script>
+        function first() {
+            alert('first message');
+        }
+        btnclk.onclick = function (){
+            alert('second message');
+        }        
+    </script>
+</body>
+</html>

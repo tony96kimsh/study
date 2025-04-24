@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <form name="test">
+        아이디: <input type="text" name = "id" size = 20 valeu = ""><p></p>
+        패스워드: <input type="password" name = "pw" size = 10 valeu = "" ><p></p>
+
+        <button name="btn1" onclick="register()">등록하기</button>
+        <button name="btn2" onclick="rewrite()">다시작성</button>
+    </form>
+
+    <script>
+        function register() {
+            document.test.submit();
+            alert("가입 성공")
+        }
+        function rewrite() {
+            document.test.reset();
+            alert("다시 입력하세요")
+        }
+    </script>
+</body>
+</html>

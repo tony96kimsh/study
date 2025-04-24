@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 객체</title>
+</head>
+<body>
+
+    <script>
+        var alpha = new Array("D", "Y", "M", "A", "F", "C")
+        var num = new Array(12, 5, 7, 2, 1, 9, 10, 11);
+
+        var sortAlpha = alpha.sort();
+         var sortNum = num.sort(function(left, right) {
+            return left - right;
+         });
+
+         document.write(sortAlpha + "<p>")
+         document.write(sortNum + "<p>")
+
+    </script>
+    
+</body>
+</html>

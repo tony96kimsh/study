@@ -1,0 +1,254 @@
+
+<style>
+    body {
+        background-color: #000;
+    }
+    canvas {
+        background-color: #0099ff;
+        
+    }
+    </style>
+    
+    
+    <canvas id="canvas" width="800" height="600"></canvas>
+    
+    <script>
+        //캔버스 객체
+        var canvas;
+        var ctx;
+        var canvasBuffer;
+        var bufferCtx;
+        var threadSpeed = 16;
+    
+        // 잠수함 캐릭터
+        var submarine
+        var sx, sy, sw = 60, sh = 35
+    
+        //배경 이미지
+        var background;
+    
+        // 장애물
+        var enemy = new Array();
+        var enemyColor = ['red', 'blue', 'white'];
+        var ellapse
+    
+        // 타이머
+        var loopInstance;
+    
+        // 게임상태
+        var STATE_START = false;
+        var STATE_GAMEOVER = false;
+    
+        // 키 상태
+        var keyPressed = []
+    
+        // 경과시간
+        var oldTime;
+        var startTime;
+        var totalTime;
+    
+        // 이벤트
+        window.addEventListener('load', initialize, false);
+        window.addEventListener('keydown', getKeyDown, false);
+        window.addEventListener('keyup', getKeyUp, false);
+     
+        function startMessage() {
+            drawText(ctx, 'Enter to start', canvas.width /2,
+             canvas.height/2,
+             "bold 30px arial",
+             "#ffff00",
+             "center");
+            drawText(ctx, '조작 : ←↑→↓', 
+                canvas.width /2,
+                canvas.height/2 + 30,
+                "bold 30px arial",
+                "#ffff00",
+                "center");
+        }
+    
+        function drawText(ctx, text, x, y, font, color, align) {
+            ctx.font = font;
+            ctx.fillStyle = color;
+            ctx.textAlign = align;
+            ctx.fillText(text, x, y)
+        }
+    
+        function setImage () {
+            submarine = new Image();
+            submarine.src = "submarine.png"
+            background = new Image();
+            background.src = "bg.jpeg"
+    
+    
+            // 이미지가 모두 로드된 후에 초기화되도록 처리
+            background.onload = function () {
+                submarine.onload = function () {
+                    console.log("모든 이미지 로드 완료");
+                    // drawAll()을 강제로 호출하거나 게임 시작 조건 만족 시 그리게 하면 됨
+                    drawAll();
+                }
+            }
+        }
+    
+        function startGame() {
+            STATE_START = true;
+            // 소스 크기 설정
+            sx = canvas.width / 2 - 18;
+            sy = canvas.height / 2 - 18;
+            sw = 60;
+            sh = 35;
+    
+            // 장애물 생성
+            createObstacle();
+        }
+    
+        function createObstacle() {
+            enemy.length = 0;
+            for(var i = 0; i < 60; i++) {
+                enemy.push({
+                    x : Math.random() * canvas.width,
+                    y : (i < 60 / 2 ? 20 : canvas.height - 20),
+                    vx : Math.random() * 200 - 100,
+                    vy : Math.random() * 200 - 100,
+                    color : Math.floor(Math.random() * 3)
+                })
+            } 
+        }
+    
+        function moveObstacle() {
+            for(var i = 0; i < 60; i++) {
+                var mx = enemy[i].vx * ellapse / 1000;
+                var my = enemy[i].vy * ellapse / 1000;
+                enemy[i].x += mx;
+                enemy[i].y += my;
+    
+                // 장애물이 벽을 만났을 때
+                if(enemy[i].x > canvas.width)
+                    enemy[i].x = 0
+                if(enemy[i].x <  0)
+                    enemy[i].x = canvas.width;
+    
+                if(enemy[i].y > canvas.height)
+                    enemy[i]. y = 0
+                if(enemy[i].y < 0)
+                    enemy[i]. y = canvas.height;
+    
+                // 충돌검사
+                crashObstacle(i);
+            } 
+        }
+        function crashObstacle (index) {
+            var mx = enemy[index].x;
+            var my = enemy[index].y;
+    
+            if(
+                mx > sx - sw/2 
+                && mx < sx + sw/2 
+                && my > sy - sh/2 
+                && my < sy + sh/2) {
+                    STATE_GAMEOVER = true;
+                }
+    
+        }
+    
+        function drawObstacle() {
+            for(var i = 0; i < 60; i++) {
+                ctx.beginPath();
+                ctx.arc(enemy[i].x, enemy[i].y, 5, 0, 2 * Math.PI);
+                ctx.fillStyle = enemyColor[enemy[i].color];
+                ctx.closePath();
+                ctx.fill();
+            }
+        }
+    
+        function drawAll() {
+            if(!STATE_START) {
+                return;
+            } else if (STATE_GAMEOVER) { // 게임 종료 시
+                STATE_START = false;
+                drawText(ctx, 'Game over', canvas.width /2,
+                    canvas.height/2,
+                    "bold 30px arial",
+                    "#ffff00",
+                    "center");
+                drawText(ctx, 'Space to Restart', 
+                    canvas.width /2,
+                    canvas.height/2 + 30,
+                    "bold 30px arial",
+                    "#ffff00",
+                    "center");
+            } else { // 게임 플레이
+                // 배경이미지
+                bufferCtx.drawImage(background, 0, 0);            
+                // 잠수함 캐릭터
+                bufferCtx.drawImage(submarine, sx, sy);
+                ctx.drawImage(canvasBuffer, 0, 0);        
+                
+                // 장애물 출력
+                drawObstacle()
+            }
+        }
+    
+        function update() {
+            // 경과 시간 계산
+            let now = Date.now();
+            if (!oldTime) oldTime = now;
+            ellapse = now - oldTime;
+            oldTime = now;
+    
+            if(keyPressed[13] == true && !STATE_START) {
+                startGame();
+            }
+            // 키보드 방향키 매핑
+            if(keyPressed[38] == true) {
+                sy -= 3;
+            }
+            if(keyPressed[37] == true) {
+                sx -= 3;
+            }
+            if(keyPressed[39] == true) {
+                sx += 3;
+            }
+            if(keyPressed[40] == true) {
+                sy += 3;
+            }
+            if(keyPressed[32] == true && STATE_GAMEOVER) {
+                document.location.reload();
+            }
+    
+            if(STATE_START) {
+                // 장애물 이동
+                moveObstacle();
+                // 그려줘
+                drawAll();
+            }
+        }
+    
+        function getKeyDown(event) {
+            keyPressed[event.keyCode] = true;
+        }
+        function getKeyUp(event) {
+            keyPressed[event.keyCode] = false;        
+        }
+    
+        function initialize() {
+            // 화면그리기 준비
+            canvas = document.getElementById('canvas')
+            if (canvas == null) return;
+            ctx = canvas.getContext('2d');
+            canvasBuffer = document.createElement('canvas');
+            canvasBuffer.width = canvas.width;
+            canvasBuffer.height = canvas.height;
+            bufferCtx = canvasBuffer.getContext('2d');
+    
+            // 게임 시작 메시지
+            startMessage()
+    
+            // 이미지 설정
+            setImage();
+            
+            // 반복 동작 설정
+            loopInstance = setInterval(update, threadSpeed)
+    
+        }
+    </script>
