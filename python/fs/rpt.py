@@ -115,5 +115,123 @@ print(info)
 f = open("text_file.txt", "w")
 f.write('Hello World')
 f.close()
+'''
+'''
+# 텍스트 파일을 생성하고 "Hello, World!"라는 문자열을 파일에 쓰세요. (단, 파일명은 text_file.txt라고 한다.)
 
+## 새 파일 생성(쓰기 모드로 열기)
+with open('text_file.txt', 'w') as f:
+    f.write('Hello world')
+with open('text_file.txt', 'r') as f:
+    content = f.read()
+    print(content)
+'''
+'''
+
+text_file.txt 파일에 다음과 같은 시를 입력합니다.
+
+죽는 날까지 하늘을 우러러
+한 점 부끄럼이 없기를,
+잎새에 이는 바람에도
+나는 괴로워했다.
+별을 노래하는 마음으로
+모든 죽어 가는 것을 사랑해야지
+그리고 나한테 주어진 길을
+걸어가야겠다.
+
+오늘 밤에도 별이 바람에 스치운다.
+
+텍스트 파일을 열어서 각 줄의 길이를 출력하세요.
+'''
+'''
+with open('text_file.txt', 'r') as f:
+    # readline 호출할 때마다 파일의 현재 읽기 위치(cursor) 에서,
+    #  한 줄을 문자열(str) 로 리턴
+    while(True):      
+        line_text = f.readline()
+        line_no = len(line_text)
+        if line_no == 0:
+            break
+        print(f"글자수: {line_no}, 문장 {line_text}", end='')
+'''
+'''
+# 앞의 문제를 기반 코드로 각 줄의 길이를 출력하였다면 길이 중에 가장 긴 줄의 값을 출력하는 코드를 추가하여 작성하시오.
+with open("text_file.txt", 'r') as f:
+    line = 0
+    while(True):
+        cursor_line = len(f.readline())
+
+        if cursor_line == 0:
+            break          
+
+        if line < cursor_line:
+            print(f"line :{line}, cursor: {cursor_line}")
+            line = cursor_line
+
+        print("test: ", line)
+print(f"가장 긴 라인의 글자 수는 {line} 입니다")
+
+'''
+
+############################################################
+############################################################
+
+
+
+''' 
+다음과 같이 주어진 데이터가 있습니다.
+
+x = [1, 2, 3, 4, 5]
+y = [2, 3, 5, 7, 11]
+
+선 그래프로 시각화하세요.
+
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4, 5]
+y = [2, 3, 5, 7, 11]
+
+plt.plot(x, y)
+plt.show()
+'''
+
+
+
+
+'''
+다음과 같이 주어진 데이터가 있습니다.
+
+x = [1, 2, 3, 4, 5]
+y = [2, 3, 5, 7, 11]
+
+Bar 차트로 시각화하세요.
+'''
+'''
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4, 5]
+y = [2, 3, 5, 7, 11]
+
+plt.bar(x, y)
+plt.show()
+
+'''
+
+
+
+'''
+다음과 같이 주어진 데이터가 있습니다.
+
+x = [1, 2, 3,im 4, 5]
+y = [2, 3, 5, 7, 11]
+
+산점도로 시각화하세요.
+
+
+import matplotlib.pyplot as plt
+x = [1, 2, 3, 4, 5]
+y = [2, 3, 5, 7, 11]
+
+plt.scatter(x, y)
+plt.show()
 '''
