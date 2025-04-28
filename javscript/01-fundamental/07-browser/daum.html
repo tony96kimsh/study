@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location object</title>
+</head>
+<body>
+    
+    <script>
+        function changeAddr(){
+            location.href = "https://www.daum.net";
+        }
+        function updateDoc() {
+            location.reload();
+        }
+        function moveDoc() {
+            location.replace("https://www.daum.net/");
+        }
+    </script>
+
+    <button onclick="changeAddr()">주소변경</button>
+    <button onclick="updateDoc()">update</button>
+    <button onclick="moveDoc()">move</button>
+    <div id="result"></div>
+</body>
+</html>
