@@ -8,32 +8,25 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\KOSTA\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/gimseonghun/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\tony\\study\\c#\\MyFirstApp\\MyFirstApp.csproj",
+      "projectUniqueName": "/Users/gimseonghun/Glove/study/c#/rpt/MyFirstApp.csproj",
       "projectName": "MyFirstApp",
-      "projectPath": "C:\\tony\\study\\c#\\MyFirstApp\\MyFirstApp.csproj",
-      "packagesPath": "C:\\Users\\KOSTA\\.nuget\\packages\\",
-      "outputPath": "C:\\tony\\study\\c#\\MyFirstApp\\obj\\",
+      "projectPath": "/Users/gimseonghun/Glove/study/c#/rpt/MyFirstApp.csproj",
+      "packagesPath": "/Users/gimseonghun/.nuget/packages/",
+      "outputPath": "/Users/gimseonghun/Glove/study/c#/rpt/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\KOSTA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/gimseonghun/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net9.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -73,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
