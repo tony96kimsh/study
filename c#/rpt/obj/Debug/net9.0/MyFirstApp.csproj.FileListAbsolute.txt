@@ -13,3 +13,11 @@
 /Users/gimseonghun/Glove/study/c#/MyFirstApp/obj/Debug/net9.0/MyFirstApp.pdb
 /Users/gimseonghun/Glove/study/c#/MyFirstApp/obj/Debug/net9.0/MyFirstApp.genruntimeconfig.cache
 /Users/gimseonghun/Glove/study/c#/MyFirstApp/obj/Debug/net9.0/ref/MyFirstApp.dll
+/Users/gimseonghun/Glove/study/c#/rpt/obj/Debug/net9.0/MyFirstApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gimseonghun/Glove/study/c#/rpt/obj/Debug/net9.0/MyFirstApp.AssemblyInfoInputs.cache
+/Users/gimseonghun/Glove/study/c#/rpt/obj/Debug/net9.0/MyFirstApp.AssemblyInfo.cs
+/Users/gimseonghun/Glove/study/c#/rpt/obj/Debug/net9.0/MyFirstApp.csproj.CoreCompileInputs.cache
+/Users/gimseonghun/Glove/study/c#/rpt/obj/Debug/net9.0/MyFirstApp.sourcelink.json
+/Users/gimseonghun/Glove/study/c#/rpt/obj/Debug/net9.0/MyFirstApp.dll
+/Users/gimseonghun/Glove/study/c#/rpt/obj/Debug/net9.0/refint/MyFirstApp.dll
+/Users/gimseonghun/Glove/study/c#/rpt/obj/Debug/net9.0/MyFirstApp.pdb
