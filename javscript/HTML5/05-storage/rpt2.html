@@ -1,0 +1,81 @@
+<!-- 
+사용자가 입력한 할일 목록(TodoList)를 로컬 스토리지에 저장하고 불러오는 웹 애플리케이션을 작성하라.
+1. 텍스트 박스를 통해 사용자가 오늘 할일을 입력 받는다. 
+2. [추가] 버튼을 클릭하면 입력한 할일 항목이 리스트의 형태로 출력된다. 
+3. 항목을 입력하고 각 항목 끝에 [완료] 버튼을 배치하여 클릭하면 해당 항목이 삭제되거나, 취소선이 그어지게 한다.
+-->
+<style>
+    ul li {
+        border: 1px solid;
+    }
+</style>
+<div>
+    오늘 할일 <input type="text" name="" id="todo-inp"> 
+    <button id="add-btn">추가</button>
+</div>
+<div>
+    <h2>할일목록</h2>
+    <ul id="todo-list">
+    </ul>
+</div>
+
+<script>
+    const addBtn = document.getElementById('add-btn');
+    const del = document.getElementById('del');
+    const ul = document.getElementById('todo-list');
+    const arr = []
+    const savedList = localStorage.getItem('todoList')
+
+    const makeItem = function (val) {
+        arr.push(val)
+        localStorage.setItem('todoList', JSON.stringify(arr))
+
+
+        const li = document.createElement('li');
+        const p = document.createElement('p');
+        const button = document.createElement('button');
+
+        ul.appendChild(li);
+        li.appendChild(button);
+        li.appendChild(p);
+        
+        p.innerText = val;
+        button.innerHTML = "완료";
+
+        // 삭제
+        button.addEventListener('click', e => {
+            const item = button.parentElement;
+            const idx = [...ul.children].indexOf(item)
+            arr.splice(idx, 1);
+            console.log(arr);
+            localStorage.removeItem('todoList');
+            localStorage.setItem('todoList', JSON.stringify(arr))
+            
+
+            item.remove()
+            
+        })
+    }
+
+    addBtn.addEventListener('click', e => {
+        const todoInput = document.getElementById('todo-inp');
+        const val = todoInput.value;
+
+        if(val) {
+            makeItem(val);
+            todoInput.value = ''
+        } else {
+            alert('입력값이 없습니다.');
+        }
+    })
+
+
+
+
+    if (savedList) {        
+        const arr = JSON.parse(savedList);
+        arr.forEach(makeItem)        
+    } 
+    console.log(savedList.trim().split(","))
+
+</script>

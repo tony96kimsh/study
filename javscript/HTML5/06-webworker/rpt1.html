@@ -1,0 +1,32 @@
+<!-- 
+에코 서버를 만들어보자. 
+메인 스레드에서 웹 워커로 메시지를 보내고, 
+워커는 받은 메시지를 다시 메인 스레드로 보낸다.
+
+메시지 예
+메인 스레드 : 홍박사님을 아세요?
+워커 스레드 : 홍박사님을 그만 알고 싶어요.
+-->
+
+<h1>에코 서버</h1>
+<input type="button" onclick="applyWorker(event)" value="홍박사님을 아세요?"></input>
+<ol id="req-list"></ol>
+
+<script>
+  const reqList = document.getElementById('req-list')
+  const worker = new Worker("rpt1.js");
+
+
+  const addMsg = function (msg) {
+      const li = document.createElement('li');
+      li.textContent = msg
+      reqList.append(li)
+  }
+
+  function applyWorker() {
+    worker.postMessage('홍박사를 아세요?')
+    worker.onmessage = event => {
+      addMsg(event.data);
+    }
+  }
+</script>

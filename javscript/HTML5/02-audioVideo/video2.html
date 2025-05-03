@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <body>
+        <!-- <video src="sample.mp4" controls="controls" width="500"></video> -->
+
+    <video
+        id="vod"
+        src="sample.mp4"
+        type="video/mp4"
+        controls="controls"
+        width="500"
+        
+    ></video>
+    <br>
+    <button onclick="videoPlay()">재생</button>  
+    <button onclick="videoPause()">일시정지</button>  
+    볼륨 : <input 
+        id="vcontrol"
+        type="range"
+        step="0.1"
+        min="0" 
+        max="1" 
+        onchange="updateVolume()"
+    >
+    
+
+    <script>
+        let vod = document.getElementById("vod");
+
+         function videoPlay() {
+            vod.play()
+         }
+         function videoPause() {
+            vod.pause()
+         }
+
+        function updateVolume() {
+            vod.volume = document.getElementById(("vcontrol").value)
+
+        }
+
+    </script>
+
+</body>
+</html>

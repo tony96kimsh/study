@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>object type event handler </title>
+</head>
+<body>
+    <input id="btnclk" type="button" value="btn">
+    <script>
+        let obj = {
+            handleEvent(event){
+                alert(event.type);
+                alert(event.clientX);
+                alert(event.clientY);
+            }
+        };
+        btnclk.addEventListener('click', obj);
+    </script>
+</body>
+</html>

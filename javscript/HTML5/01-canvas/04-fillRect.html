@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <canvas id="mycanvas" width="600" height="400" style="border:3px solid">
+
+    </canvas>
+
+    <script>
+        const ctx = document.getElementById("mycanvas");
+        const myContext = ctx.getContext("2d");
+        
+        // 사각형 선만 그림
+        myContext.beginPath();
+        myContext.strokeStyle = 'rgb(255, 0, 0)';
+        myContext.strokeRect(10, 10, 100, 100);
+
+        // 사각형 내부 파란색
+        myContext.fillStyle = "rgb(0, 0, 255)";
+        myContext.fillRect(150, 10, 100, 100);        
+
+    </script>
+</body>
+</html>

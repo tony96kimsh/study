@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>wrapper</title>
+</head>
+<body>
+    <ul>
+        <li>HTML</li>
+    </ul>
+    <ul class="objlang">
+        <li>Javascript</li>
+    </ul>
+
+    <script>
+        (function($){
+                $('.objlang').click(function(){
+                $('li', this).css('background-color', 'yellow');
+                console.log(this);
+            }) 
+        })(jQuery)
+
+    </script>
+</body>
+</html>
