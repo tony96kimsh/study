@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #box1 {
+            width: 75px;
+            height: 70px;
+            padding: 5px;
+            margin: 5px;
+            background-color: red;
+        }
+        #target {
+            width: 200px;
+            height: 300px;
+            padding: 5px;
+            margin: 30px;
+            border: 3px solid;
+            background-color: aliceblue;
+        }        
+    </style>
+</head>
+<body>
+    <h2>draggable 속성 설정</h2>
+    <div id="box1" draggable="true" 
+        ondragstart="dargstart(event)"
+        ondrag="dragging(event)"
+        ondragend="dragend(event)"
+        ></div>
+    <div id="target"
+        ondragenter="dragenter(event)"
+        ondragover="dragover(event)"
+        ondragleave="dragleave(event)"
+    ></div>
+    <div id="result"></div>
+
+    <script>
+        function dragenter(e) {
+            document.getElementById("result").innerHTML = "target 영역에 진입";           
+        }
+        function dragover(e) {
+            document.getElementById("result").innerHTML = "target 영역 위에 있습니다.";
+        }
+        function dragleave(e) {
+            document.getElementById("result").innerHTML = "target 영역에서 나갔습니다.";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <canvas id="mycanvas" width="600" height="400" style="border:3px solid"></canvas>
+
+    <script>
+        let canvas = document.getElementById("mycanvas");
+        let ctx = mycanvas.getContext("2d");
+
+        let gdtPurple = ctx.createLinearGradient(0, 0, 200, 0);
+        gdtPurple.addColorStop(0, "white");
+        gdtPurple.addColorStop(0, "purple");
+
+        ctx.fillStyle = gdtPurple;
+        ctx.fillRect(0, 0, 200, 100);
+    </script>
+</body>
+</html>

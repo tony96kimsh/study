@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery AJAX</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+        $.ajax({
+                method: "GET",
+                url: "https://dapi.kakao.com/v3/search/book?target=title&query=나혼자c언어",
+                headers: {Authorization: "KakaoAK 5da45d4f51738bbe234774a9193eb392"},
+            })
+        .done(function(data){
+            console.log(data);
+        })
+    </script>
+</body>
+</html>

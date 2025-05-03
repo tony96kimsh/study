@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+  <script>
+    $(document).ready(function(){
+      $('#pp').css('color', 'green');
+    })
+
+    function fn_click(color) {
+      $('#pp').css('color', color);
+    }
+  </script>
+  
+  <p id="pp">
+    Hello World
+  </p>
+  <button id="red" onclick="fn_click('red')">
+    red
+  </button>
+  <button id="blue" onclick="fn_click('blue')">
+    blue
+  </button>
+</body>
+</html>

@@ -1,0 +1,25 @@
+0000000000000000000000000000000000000000 c058eb53abfca23d0deeb2ce6771391a0f3be8a1 Tony <tony96kimsh@gmail.com> 1742382630 +0900	commit (initial): first commit
+c058eb53abfca23d0deeb2ce6771391a0f3be8a1 96edc781c32728482262313ef70cc6da640af783 Tony <tony96kimsh@gmail.com> 1742382902 +0900	commit: first commit
+96edc781c32728482262313ef70cc6da640af783 0d9b329a9753c0726c41132d6c5717c2193e9af5 Tony <tony96kimsh@gmail.com> 1742383248 +0900	pull origin master --rebase (start): checkout 0d9b329a9753c0726c41132d6c5717c2193e9af5
+0d9b329a9753c0726c41132d6c5717c2193e9af5 48ce171bfa615074c6d9bdc17e6876e55f124821 Tony <tony96kimsh@gmail.com> 1742383248 +0900	pull origin master --rebase (pick): first commit
+48ce171bfa615074c6d9bdc17e6876e55f124821 f83cda64284774ca084ab10b74af62055f630f27 Tony <tony96kimsh@gmail.com> 1742383248 +0900	pull origin master --rebase (pick): first commit
+f83cda64284774ca084ab10b74af62055f630f27 f83cda64284774ca084ab10b74af62055f630f27 Tony <tony96kimsh@gmail.com> 1742383248 +0900	pull origin master --rebase (finish): returning to refs/heads/master
+f83cda64284774ca084ab10b74af62055f630f27 156afde8a82bf96e75e8a11326898cc9abb71008 Tony <tony96kimsh@gmail.com> 1742385370 +0900	commit: edit folder
+156afde8a82bf96e75e8a11326898cc9abb71008 c373f178afaadd89fc126a4ab5419284dc83d4f2 Tony <tony96kimsh@gmail.com> 1742654454 +0900	pull origin master: Fast-forward
+c373f178afaadd89fc126a4ab5419284dc83d4f2 136a4ae8319d97666c013b35dec4dc532c855302 Tony <tony96kimsh@gmail.com> 1742778067 +0900	commit: add STL
+136a4ae8319d97666c013b35dec4dc532c855302 0000000000000000000000000000000000000000 Tony <tony96kimsh@gmail.com> 1742779301 +0900	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 136a4ae8319d97666c013b35dec4dc532c855302 Tony <tony96kimsh@gmail.com> 1742779301 +0900	Branch: renamed refs/heads/master to refs/heads/main
+136a4ae8319d97666c013b35dec4dc532c855302 55047e617121035015b995e5d5d29ab8592b6b02 Tony <tony96kimsh@gmail.com> 1742779395 +0900	commit: test
+55047e617121035015b995e5d5d29ab8592b6b02 3b9041e1ff8242e7f57b1965034e31e29c8888e8 Tony <tony96kimsh@gmail.com> 1742779424 +0900	pull origin main --rebase (start): checkout 3b9041e1ff8242e7f57b1965034e31e29c8888e8
+3b9041e1ff8242e7f57b1965034e31e29c8888e8 da8b98967cd3fb9ef6043fa6119123ac46da7e70 Tony <tony96kimsh@gmail.com> 1742779424 +0900	pull origin main --rebase (pick): test
+da8b98967cd3fb9ef6043fa6119123ac46da7e70 da8b98967cd3fb9ef6043fa6119123ac46da7e70 Tony <tony96kimsh@gmail.com> 1742779424 +0900	pull origin main --rebase (finish): returning to refs/heads/main
+da8b98967cd3fb9ef6043fa6119123ac46da7e70 c44e8e507f15d60798e65e1040ca41f0c8dc8848 Tony <tony96kimsh@gmail.com> 1742800467 +0900	commit: seperate folder
+c44e8e507f15d60798e65e1040ca41f0c8dc8848 836014f664051d87d3dbba17e60ad2010fadb8fc Tony <tony96kimsh@gmail.com> 1742801777 +0900	commit: edit folder and md
+836014f664051d87d3dbba17e60ad2010fadb8fc f0fc49aeae3791ed7ba5e32710ae323e4babbcd2 Tony <tony96kimsh@gmail.com> 1742801839 +0900	commit: edit MD
+f0fc49aeae3791ed7ba5e32710ae323e4babbcd2 38ecf75dc120b1a0814e5d51548b3c39a133257a Tony <tony96kimsh@gmail.com> 1742802260 +0900	commit: edit MD
+38ecf75dc120b1a0814e5d51548b3c39a133257a b99431dd90e59326907fb14bfb19025880bc92a2 Tony <tony96kimsh@gmail.com> 1742954839 +0900	commit: STL-Algorithms
+b99431dd90e59326907fb14bfb19025880bc92a2 eb8928ad68be23f24c25cd6f75aeb9967e6ffbd6 Tony <tony96kimsh@gmail.com> 1743489216 +0900	commit: learn smartpoint
+eb8928ad68be23f24c25cd6f75aeb9967e6ffbd6 b591cd6aff7c8dc9165d43978426f1f7b17612ba Tony <tony96kimsh@gmail.com> 1743517765 +0900	commit: finish singleton report
+b591cd6aff7c8dc9165d43978426f1f7b17612ba 511923b5fa1ee6d22b3b7e7fdf6da6fecf051548 Tony <tony96kimsh@gmail.com> 1743518682 +0900	commit: Remove: singleton move "pattern" repo
+511923b5fa1ee6d22b3b7e7fdf6da6fecf051548 c10900bf036cb177706da62434f8fac5abebe986 Tony <tony96kimsh@gmail.com> 1743730627 +0900	commit: finish c++ class
+c10900bf036cb177706da62434f8fac5abebe986 4343eb4fd22f647fcccd2cab6548a526435eacf8 Tony <tony96kimsh@gmail.com> 1743730815 +0900	commit: edit readme

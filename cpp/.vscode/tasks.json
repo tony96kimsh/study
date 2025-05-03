@@ -1,0 +1,40 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build active C file",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "build active C++ file",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "run python file",
+      "type": "shell",
+      "command": "python3",
+      "args": [
+        "${file}"
+      ],
+      "group": "build"
+    }
+  ]
+}

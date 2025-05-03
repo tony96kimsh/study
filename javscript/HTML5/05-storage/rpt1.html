@@ -1,0 +1,92 @@
+<!-- 
+ 세션 스토리지는 사용자 로그인 상태 관리에 유용하다. 
+사용자가 아이디, 비밀번호를 입력하여 로그인할 수 있는 UI를 만든다. 
+DB는 없으므로 아이디는 user, 비밀번호는 1234로 가정한다.
+올바른 인증 정보로 로그인하면 "로그인되었습니다."라는 문구와 함께 사용자 정보를 세션 스토리지에 저장한다. 
+로그아웃 버튼을 클릭하면 세션 스토리지에서 사용자 정보를 제거한다. 
+브라우저를 종료했다가 다시 실행해도 로그인 상태가 유지 되지 않는다.
+
+1. 아이디, 비밀번호 입력 창 생성
+2. 로그인 버튼, 로그아웃 버튼 생성
+3. 상태 문구를 보여줄 상태 창 생성 
+-->
+
+<body>
+    <form action="post" method="" name="user">
+        <div id="type-box">
+            id : <input type="text" name="id" id="inp-id">
+            <br><br>
+            pw : <input type="password" name="pw" id="inp-pw">
+            <br><br>
+        </div>
+        <button type="button" id="log-btn">로그인</button>
+    </form>
+    <p id="result"></p>
+</body>
+
+<script>
+    const userDB = {
+        'user' : '1234',
+        'user1' : '1111',
+        'user2' : '2222',
+    }
+    const idInput = document.getElementById('inp-id')
+    const pwInput = document.getElementById('inp-pw')
+    const typeBox = document.getElementById('type-box')
+
+    const logBtn = document.getElementById('log-btn')
+    const resultDiv = document.getElementById('result')
+
+    // sessionStorage
+    let storedUser = sessionStorage.getItem("userId");
+    let loggedIn = sessionStorage.getItem('isLoggedIn');   
+
+    logBtn.addEventListener('click', e => {
+        if(!loggedIn) { // 로그인 클릭 시
+            const getId = idInput.value;
+            const getPw = pwInput.value;
+          
+            if(getId in userDB && userDB[getId] === getPw) {
+                sessionStorage.setItem("userId", getId);
+                sessionStorage.setItem("isLoggedIn", true);
+    
+                storedUser = getId;
+                loggedIn = true;
+    
+                checkLog();
+            } else {
+                if (getId in userDB) {
+                    resultDiv.innerHTML = "비밀번호가 일치하지 않습니다.";
+                    return;       
+                }
+                resultDiv.innerHTML = "유저 정보가 없습니다.";
+        }} else { // 로그아웃 클릭 시
+            // 세션 스토리지 값 삭제
+
+            // 초기화
+            storedUser = null;
+            loggedIn = false;
+            // 폼 노출
+            checkLog();
+        }
+
+    })
+
+    function checkLog() {
+        if(loggedIn) {
+            resultDiv.innerHTML = `안녕하세요. ${storedUser} 님`;
+            typeBox.style.display = "none";
+            logBtn.innerHTML = "로그아웃";
+            
+        } else {
+            sessionStorage.removeItem('userId');
+            sessionStorage.removeItem('isLoggedIn');
+            typeBox.style.display = "block";
+            resultDiv.innerHTML = '정보를 입력하세요';        
+            logBtn.innerHTML = "로그인";
+        }
+    }
+
+    checkLog();
+    
+</script>

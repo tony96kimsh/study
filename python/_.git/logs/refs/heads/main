@@ -1,0 +1,4 @@
+0000000000000000000000000000000000000000 2d890d9165b8349e0588f13b9423cd1286cbaf82 Tony <tony96kimsh@gmail.com> 1744615606 +0900	commit (initial): first commit
+2d890d9165b8349e0588f13b9423cd1286cbaf82 2d890d9165b8349e0588f13b9423cd1286cbaf82 Tony <tony96kimsh@gmail.com> 1744615606 +0900	Branch: renamed refs/heads/master to refs/heads/main
+2d890d9165b8349e0588f13b9423cd1286cbaf82 0e60d4b0d729ac49fd702249734ed172455b272f Tony <tony96kimsh@gmail.com> 1744619135 +0900	commit: add MD
+0e60d4b0d729ac49fd702249734ed172455b272f dc452efed95f2c6a8f6508e9c8d09b5f8a852c0b Tony <tony96kimsh@gmail.com> 1744705344 +0900	commit: learn type and variable
