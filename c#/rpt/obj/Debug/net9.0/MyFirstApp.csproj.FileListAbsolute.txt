@@ -21,3 +21,10 @@
 /Users/gimseonghun/Glove/study/c#/rpt/obj/Debug/net9.0/MyFirstApp.dll
 /Users/gimseonghun/Glove/study/c#/rpt/obj/Debug/net9.0/refint/MyFirstApp.dll
 /Users/gimseonghun/Glove/study/c#/rpt/obj/Debug/net9.0/MyFirstApp.pdb
+/Users/gimseonghun/Glove/study/c#/rpt/bin/Debug/net9.0/MyFirstApp
+/Users/gimseonghun/Glove/study/c#/rpt/bin/Debug/net9.0/MyFirstApp.deps.json
+/Users/gimseonghun/Glove/study/c#/rpt/bin/Debug/net9.0/MyFirstApp.runtimeconfig.json
+/Users/gimseonghun/Glove/study/c#/rpt/bin/Debug/net9.0/MyFirstApp.dll
+/Users/gimseonghun/Glove/study/c#/rpt/bin/Debug/net9.0/MyFirstApp.pdb
+/Users/gimseonghun/Glove/study/c#/rpt/obj/Debug/net9.0/MyFirstApp.genruntimeconfig.cache
+/Users/gimseonghun/Glove/study/c#/rpt/obj/Debug/net9.0/ref/MyFirstApp.dll
