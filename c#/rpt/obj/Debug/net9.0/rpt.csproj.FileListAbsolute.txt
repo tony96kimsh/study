@@ -1,0 +1,15 @@
+C:\tony\study\c#\rpt\obj\Debug\net9.0\rpt.GeneratedMSBuildEditorConfig.editorconfig
+C:\tony\study\c#\rpt\obj\Debug\net9.0\rpt.AssemblyInfoInputs.cache
+C:\tony\study\c#\rpt\obj\Debug\net9.0\rpt.AssemblyInfo.cs
+C:\tony\study\c#\rpt\obj\Debug\net9.0\rpt.csproj.CoreCompileInputs.cache
+C:\tony\study\c#\rpt\obj\Debug\net9.0\rpt.sourcelink.json
+C:\tony\study\c#\rpt\bin\Debug\net9.0\rpt.exe
+C:\tony\study\c#\rpt\bin\Debug\net9.0\rpt.deps.json
+C:\tony\study\c#\rpt\bin\Debug\net9.0\rpt.runtimeconfig.json
+C:\tony\study\c#\rpt\bin\Debug\net9.0\rpt.dll
+C:\tony\study\c#\rpt\bin\Debug\net9.0\rpt.pdb
+C:\tony\study\c#\rpt\obj\Debug\net9.0\rpt.dll
+C:\tony\study\c#\rpt\obj\Debug\net9.0\refint\rpt.dll
+C:\tony\study\c#\rpt\obj\Debug\net9.0\rpt.pdb
+C:\tony\study\c#\rpt\obj\Debug\net9.0\rpt.genruntimeconfig.cache
+C:\tony\study\c#\rpt\obj\Debug\net9.0\ref\rpt.dll
