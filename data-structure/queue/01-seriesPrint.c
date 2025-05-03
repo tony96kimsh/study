@@ -13,8 +13,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <unistd.h>  // 유닉스 계열: sleep 함수 (초 단위)
-
-//#include <windows.h>  // Windows용
+//#include <windows.h>  // Windows용 (밀리초)
 
 
 int main() {
@@ -25,21 +24,17 @@ int main() {
     {
         printf("프린트 장 수를 입력해주세요('-1' 종료): ");
         scanf("%d", &inp);
-
         if (inp == -1) {
             break;
         }
         
-        //1
-        for (int i = 1; i < inp; i++) {
-
+        for (int i = 1; i <= inp; i++) {
+            if(i == 1) 
+                printf("인쇄중...\n");
+            sleep(1);
+            printf("%d 장 인쇄 완료\n", i);
+            fflush(stdout);
         }
-        /*
-        // 비동기 큐 추가
-        total += inp;
-        printf("%d 장 추가되었습니다. 총 %d장 인쇄 중 \n", inp, total);
-        */
-
     }
     return 0;
 }
