@@ -2,9 +2,15 @@
 #include <stdbool.h> // boolean
 #include <stdlib.h> // malloc
 #include <string.h> // memset
-#include <unistd.h> // sleep
 
-#include <pthread.h> // thread
+#ifdef _WIN32
+    #include <windows.h>
+    #define SLEEP(sec) Sleep((sec) * 1000)
+#else // mac
+    #include <unistd.h>
+    #define SLEEP(sec) sleep(sec)
+#endif
+
 #include <time.h>
 
 // 문서 큐
@@ -72,7 +78,7 @@ void PrintQueue() {
 //프린터 - 페이지 삭제 함수 :  
 int Delete() {
     while(doc_queue[0] > 0) {
-        sleep(1);
+        SLEEP(1);
         --doc_queue[0];
         printf("%d 페이지 인쇄 중...\n",
             now_page);
