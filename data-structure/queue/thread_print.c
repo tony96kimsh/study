@@ -1,6 +1,12 @@
-#include <stdio.h>
+#ifdef _WIN32
+#include <windows.h>
+#else // #elif __APPLE__ / __linux__
+#include <unistd.h>
 #include <pthread.h> // thread
-#include <unistd.h> // sleep() 
+#endif
+
+#include <stdio.h>
+// #include <unistd.h> // sleep() 
 
 void* say_hello(void* arg) {
     for(int i = 0; i < 5; i++ ) {
