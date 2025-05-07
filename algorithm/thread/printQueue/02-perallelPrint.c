@@ -5,7 +5,6 @@
 #include <unistd.h> // sleep
 
 #include <pthread.h> // thread
-#include <time.h>
 
 // 문서 큐
 int* doc_queue;
