@@ -1,0 +1,15 @@
+C:\tony\study\c#\abstract\MyConsoleApp\bin\Debug\net9.0\MyConsoleApp.exe
+C:\tony\study\c#\abstract\MyConsoleApp\bin\Debug\net9.0\MyConsoleApp.deps.json
+C:\tony\study\c#\abstract\MyConsoleApp\bin\Debug\net9.0\MyConsoleApp.runtimeconfig.json
+C:\tony\study\c#\abstract\MyConsoleApp\bin\Debug\net9.0\MyConsoleApp.dll
+C:\tony\study\c#\abstract\MyConsoleApp\bin\Debug\net9.0\MyConsoleApp.pdb
+C:\tony\study\c#\abstract\MyConsoleApp\obj\Debug\net9.0\MyConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\tony\study\c#\abstract\MyConsoleApp\obj\Debug\net9.0\MyConsoleApp.AssemblyInfoInputs.cache
+C:\tony\study\c#\abstract\MyConsoleApp\obj\Debug\net9.0\MyConsoleApp.AssemblyInfo.cs
+C:\tony\study\c#\abstract\MyConsoleApp\obj\Debug\net9.0\MyConsoleApp.csproj.CoreCompileInputs.cache
+C:\tony\study\c#\abstract\MyConsoleApp\obj\Debug\net9.0\MyConsoleApp.sourcelink.json
+C:\tony\study\c#\abstract\MyConsoleApp\obj\Debug\net9.0\MyConsoleApp.dll
+C:\tony\study\c#\abstract\MyConsoleApp\obj\Debug\net9.0\refint\MyConsoleApp.dll
+C:\tony\study\c#\abstract\MyConsoleApp\obj\Debug\net9.0\MyConsoleApp.pdb
+C:\tony\study\c#\abstract\MyConsoleApp\obj\Debug\net9.0\MyConsoleApp.genruntimeconfig.cache
+C:\tony\study\c#\abstract\MyConsoleApp\obj\Debug\net9.0\ref\MyConsoleApp.dll
