@@ -130,4 +130,3 @@ for(let info in user) {
     // 순회하는 info는 키값
     console.log(`${info} : ${user[info]}`);
 }
-
