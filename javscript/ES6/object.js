@@ -118,15 +118,80 @@
 for in
 foreach
  */
-let user = {
-    id : "tony",
-    pw : "1234",
-    name : 'ksh',
-    mobile : "010",
-    country : '대한민국',
-}
+// let user = {
+//     id : "tony",
+//     pw : "1234",
+//     name : 'ksh',
+//     mobile : "010",
+//     country : '대한민국',
+// }
 
-for(let info in user) {
-    // 순회하는 info는 키값
-    console.log(`${info} : ${user[info]}`);
-}
+// for(let info in user) {
+//     // 순회하는 info는 키값
+//     console.log(`${info} : ${user[info]}`);
+// }
+
+// 구조 분해 할당, 비구조할당
+// const color = ['red', 'green', 'blue'];
+// let [r, g, b] = color;
+
+// console.log(r, g, b);
+
+
+// 배열의 기본값 설정
+// const [a, b, c = 'c언어'] = ['C#', 'Java', 'python']
+
+// 쉼표로 값을 할당하지 않을 수 있음
+// const [a, ,b, c = 'c언어'] = ['C#', 'Java', 'python', '리액트']
+// console.log(a, b, c);
+
+// 배열의 나머지 요소 가져오기
+// const [a, b, ...rest] = ['C#', 'Java', 'python', '리액트', 'C++']
+// console.log(a, b);
+// console.log(rest);
+// console.log(rest[0]);
+// console.log(rest[1]);
+// console.log(rest[2]);
+
+// 배열끼리 결합
+// const arr1 = ['C#', 'java'];
+// const arr2 = ['python', 'react', 'C++'];
+
+// let result;
+// console.log(arr1 + arr2); // 문자열로 전환되서 붙는데 사이 반점이 없음
+// console.log([...arr1, ...arr2]);
+
+// 객체의 구조분해할당
+
+// let user = {키1 : 값1, 키2 : 값2}
+
+// let userid = user.id;
+// let userpw = user.pw;
+// let username = user.name;
+// let userage = user.age;
+
+//객체의 구조분해 할당
+// let {id='guest', pw='1111', name, age} = {
+//     id : 'star',
+//     pw : '1234',
+//     name : '별',
+//     age : 30,
+// };
+
+// console.log(id);
+// console.log(pw);
+// console.log(name);
+// console.log(age);
+
+// 객체의 나머지 요소 가져오기
+// let {id, ...rest} = {
+//     id : 'star',
+//     pw : '1234',
+//     name : '별',
+//     age : 30,
+// };
+
+// console.log(id);
+// console.log(rest);
+// console.log(rest.pw);
+
