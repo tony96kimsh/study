@@ -1,46 +1,36 @@
-﻿/* 
-# 문제 .4 (난이도: 하) 델리게이트 배열을 통한 일괄 처리
-
-여러 개의 정수 출력 메서드를 델리게이트 배열에 저장하고, 
-반복문을 통해 일괄 호출하라.  
-델리게이트 선언, 메서드 정의, 배열 생성 및 반복 호출 흐름을 
-포함한 코드를 완성하라.
-*/
-using System;
+﻿using System;
 
 namespace MyApp
 {
-    delegate class void Dlg(int a, int b)
-    public class Arithmetic
+    // 1. 델리게이트 선언
+    public delegate void Notify();
+
+    // 2. 이벤트 발생클래스
+    public class Process
     {
-        public int result;
-        public void Plus (int a, int b) 
+        public event Notify OnCompleted;
+
+        public void Run()
         {
-            result  = a + b;
-            Console.WriteLine(result.ToString());
-        }
-        public void Minus (int a, int b) 
-        {
-            result  = a - b;
-            Console.WriteLine(result.ToString());
-        }
-        public void Divide (int a, int b) 
-        {
-            result  = a / b;
-            Console.WriteLine(result.ToString());
-        }
-        public void Multiply (int a, int b) 
-        {
-            result  = a * b;
-            Console.WriteLine(result.ToString());
+            Console.WriteLine("작업 수행 중...");
+            // 작업 끝났다고 가정
+            OnCompleted?.Invoke();
+            // 이벤트 호출(null 체크 필수)
         }
     }
     internal class Program
     {
+        
         static void Main(string[] args)
         {
-            Arithmetic arit = new Arithmetic();
-            
+            Process p = new Process();
+
+            // 이벤트 구독
+        }
+        
+        static void Finished()
+        {
+
         }
     }
 }
