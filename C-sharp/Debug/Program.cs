@@ -18,19 +18,21 @@ namespace MyApp
             // 이벤트 호출(null 체크 필수)
         }
     }
+    // 03 이벤트 구독하는 클래스
     internal class Program
-    {
-        
+    {        
         static void Main(string[] args)
         {
             Process p = new Process();
 
-            // 이벤트 구독
+            // 이벤트 구독(subscription)
+            p.OnCompleted += Finished;
+            p.Run();            
         }
         
         static void Finished()
         {
-
+            Console.WriteLine("작업 완료 알림 받음!");
         }
     }
 }
