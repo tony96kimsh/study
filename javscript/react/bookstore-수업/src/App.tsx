@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div>
-     {/* <HookRef /> */}
+     <HookRef />
      <Content></Content>
      <Footer></Footer>
     </div>
