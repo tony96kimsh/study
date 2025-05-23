@@ -1,7 +1,7 @@
 
 import { Container } from 'react-bootstrap';
 import { Route, Routes } from 'react-router';
-import MyCarousel from '../component/Carousel';
+import BookDetail from '../pages/BookDetail';
 
 const Contents = () => {
     return(
@@ -12,6 +12,7 @@ const Contents = () => {
                     <Route path="/about" element={<div>소개페이지</div>} />
                     <Route path="/product" element={<div>제품페이지</div>} />
                     <Route path="/contact" element={<div>연락처</div>} />      
+                    <Route path="/detail/:id" element={<BookDetail />} />      
                 </Routes>        
         </Container> 
         </>
