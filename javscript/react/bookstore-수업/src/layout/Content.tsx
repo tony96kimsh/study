@@ -12,6 +12,7 @@ import DetailPage from "../pages/DetailPage";
 import LoginPage from "../pages/LoginPage";
 import HomePage from "../pages/Hompage";
 import DetailPage2 from "../pages/DetailPage2";
+import { PersonFill } from "react-bootstrap-icons";
 
 const Content : React.FC = ()=>{
     const [books, setBooks] = useState<Book[]>(bookdata);
@@ -22,13 +23,16 @@ const Content : React.FC = ()=>{
         <div>
             <Navbar style={{backgroundColor : '#4169E1'}} data-bs-theme="dark">
                 <Container>
-                <Navbar.Brand href="/"><h1>BookStore</h1></Navbar.Brand>
-                <Nav className="me-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/about">About</Nav.Link>
-                    <Nav.Link href="/list">Product</Nav.Link>
-                    <Nav.Link href="/contact">Contact</Nav.Link>
-                </Nav>
+                    <Navbar.Brand href="/"><h1>BookStore</h1></Navbar.Brand>
+                    <Nav className="me-auto">
+                        <Nav.Link href="/">Home</Nav.Link>
+                        <Nav.Link href="/about">About</Nav.Link>
+                        <Nav.Link href="/list">Product</Nav.Link>
+                        <Nav.Link href="/contact">Contact</Nav.Link>
+                    </Nav>
+                        <Nav.Link href="/login" className="d-flex align-item-center">
+                            <PersonFill size={25} className="me-2" /> Login
+                        </Nav.Link>
                 </Container>
             </Navbar>           
             <Routes>

@@ -9,7 +9,6 @@ function App() {
 
   return (
     <div>
-     <HookRef />
      <Content></Content>
      <Footer></Footer>
     </div>
