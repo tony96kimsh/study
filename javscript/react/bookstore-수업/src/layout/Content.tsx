@@ -10,9 +10,9 @@ import ContactPage from "../pages/ContactPage";
 import CartPage from "../pages/CartPage";
 import DetailPage from "../pages/DetailPage";
 import LoginPage from "../pages/LoginPage";
-import HomePage from "../pages/Hompage";
+import HomePage from "../pages/HomePage";
 import DetailPage2 from "../pages/DetailPage2";
-import { PersonFill } from "react-bootstrap-icons";
+import { BasketFill, PersonFill } from "react-bootstrap-icons";
 
 const Content : React.FC = ()=>{
     const [books, setBooks] = useState<Book[]>(bookdata);
@@ -30,8 +30,11 @@ const Content : React.FC = ()=>{
                         <Nav.Link href="/list">Product</Nav.Link>
                         <Nav.Link href="/contact">Contact</Nav.Link>
                     </Nav>
-                        <Nav.Link href="/login" className="d-flex align-item-center">
+                        <Nav.Link href="/login" className="d-flex align-item-center me-2">
                             <PersonFill size={25} className="me-2" /> Login
+                        </Nav.Link>
+                        <Nav.Link href="/cart" className="d-flex align-item-center">                        
+                            <BasketFill size={25} className="me-2" /> cart
                         </Nav.Link>
                 </Container>
             </Navbar>           
