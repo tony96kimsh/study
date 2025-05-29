@@ -1,10 +1,12 @@
-const { MongoClient } = require('mongodb');
+require('dotenv').config();
 
 
 // MongoDB + Node.js 접속 코드
 const mongoclient = require('mongodb').MongoClient;
-const url = 'mongodb+srv://tony96kimsh:tonyPw123@cluster0.b6e7jna.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const url = process.env.MONGO_URL;
+// const url = 'mongodb+srv://tony96kimsh:tonyPw123@cluster0.b6e7jna.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 let mydb;
+
 
 mongoclient.connect(url)
   .then(client => {
