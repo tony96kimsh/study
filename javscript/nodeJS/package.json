@@ -13,6 +13,7 @@
     "express": "^5.1.0",
     "mongodb": "^6.16.0",
     "mysql": "^2.18.1",
-    "node-mysql": "^0.4.2"
+    "node-mysql": "^0.4.2",
+    "nodemon": "^3.1.10"
   }
 }

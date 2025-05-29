@@ -24,9 +24,13 @@ mongoclient.connect(url)
 const express = require('express');
 const app = express();
 
-
+// 루트 페이지
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
+})
+
+app.get('/enter', function(req, res){
+  res.sendFile(__dirname + '/enter.html');
 })
 
 app.get('/list', function(req, res) {  
